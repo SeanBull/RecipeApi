@@ -17,20 +17,19 @@ With your virtualenv active, install the project locally:
 pip install -e .
 ```
 
-You'll need to set the environment variable `MONGO_URI` to the URL of your MongoDB replicaset.
-I use `direnv` to configure this, and put the following line in my `.envrc` file in my project's directory:
+Set mongo atlas cloud db uri as an environment variable for flask to use.
 
 ```bash
 export MONGO_URI="export MONGO_URI="mongodb+srv://admin:<password>@cocktails.c7qomug.mongodb.net/cocktails?retryWrites=true&w=majority""
 ```
 
-You can then import the sample data with mongoimport:
+Importing data from recipes.json for testing:
 
 ```bash
 mongoimport --uri "$MONGO_URI" --file ../data/recipes.json
 ```
 
-And now you should be able to run the service like this:
+And now you should be able to run the service like this or use makefile "make run":
 
 ```bash
 FLASK_APP=cocktailapi flask run
