@@ -20,6 +20,6 @@ install:
 	python -m pip install -e .
 
 run:
-	FLASK_DEBUG=true FLASK_APP=recipeapi flask run
+	FLASK_DEBUG=true FLASK_APP=./src/recipeapi flask run
 
 .PHONY: all install clean dev

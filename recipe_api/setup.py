@@ -15,7 +15,7 @@ EXTRAS_REQUIRE["dev"] = EXTRAS_REQUIRE["tests"] + [
 
 setup(
     name="flask-recipe-api",
-    description="A small API for getting cocktail recipes.",
+    description="A small API for getting recipes.",
     version="0.0.0",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
